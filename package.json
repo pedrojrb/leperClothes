@@ -1,0 +1,44 @@
+{
+  "name": "leperclothes",
+  "version": "1.0.0",
+  "description": "\u001b[2;3~ Leper clothes es un proyecto que se basa en el desarrollo de una API REST la cual provee los datos de los productos que comercializa el emprendimiento ficticio. La finalidad es poder desarrollar un proyecto personal en el cual aplique mis conocimientos y habilidades sobre las tecnologias que se implementan para el desarrollo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"tsc && node dist/server.js",
+    "start:dev":"tsc && concurrently \"tsc -w\" \"nodemon dist/server.js\" " 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrojrb/leperClothes.git"
+  },
+  "keywords": [
+    "Leperclothes"
+  ],
+  "author": "Pedro Ruiz Baleani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrojrb/leperClothes/issues"
+  },
+  "homepage": "https://github.com/pedrojrb/leperClothes#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.4",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/morgan": "^1.9.4",
+    "class-validator": "^0.14.0",
+    "concurrently": "^8.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "typeorm": "^0.3.16",
+    "typeorm-naming-strategies": "^4.1.0"
+  }
+}
