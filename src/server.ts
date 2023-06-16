@@ -7,23 +7,28 @@ class ServerBooststrap {
     public app: express.Application = express();
     private port: number = 8000;
 
+    /**
+     * This constructor execute first configurations required for server start within problems. 
+     */
+
     constructor(){
+        //Initialize dependences
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended: true}));
         this.app.use(morgan('dev'));
         this.app.use(cors());
-        this.app.get("/api/", (req, res) => {
-            try{
-                
+        //Address to home page
+        this.app.get("/api/", (req, res) => {  
                 res.status(200).json({
                     message:"Hola mundo"
                 })
-            } catch (e){
-                throw new Error(`Error to initialize server. HTTP code: ${res.status}`)
-            }
         })
         this.listen();
     }
+
+    /**
+     * This method initialize my app. Invoce one method from my Express app
+     */
 
     public listen(): void {
         this.app.listen(this.port, () => 
